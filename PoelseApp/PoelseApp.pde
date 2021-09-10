@@ -1,14 +1,20 @@
 String Name = "";
+boolean LoggedIn = false;
 
 int CurrentPage = 0;    //Defines which page the user is currently on. 0 is the main menu and from 1 to *Insert number of questions here* are questions
 String Question = "";
 int CurrentAnswer = 0;
 boolean NextQuestionAllowed;
 
-float ScreenScale;
+
+float WidthScale;
+float HeightScale;
 
 void setup(){
   fullScreen();
+  WidthScale = width/1920;
+  HeightScale = height/1080;
+  
   frameRate(60);
   
   
