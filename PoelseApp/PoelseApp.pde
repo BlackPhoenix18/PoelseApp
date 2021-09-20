@@ -10,7 +10,8 @@ boolean NextQuestionAllowed;
 int Box = 0;
 
 void setup(){
-  fullScreen();
+  //fullScreen();
+  size(1000,1000);
   scale(width/1920);
   println("Scale set to: " + width/1920);
   

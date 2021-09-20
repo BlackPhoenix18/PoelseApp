@@ -33,10 +33,9 @@ void CheckName(){
      
      case "Emil":
      ErrorMessage("Indtast venligst også første bogstav i dit efternavn");
-     LogIn();
      break;
      
-     case "Emil L":
+     case "emil L":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
@@ -71,14 +70,13 @@ void CheckName(){
      println("Logged in as: " + Name);
      break;
      
-     case "Lærke":
+     case "Laerke":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
      case "Mikkel":
      ErrorMessage("Indtast venligst også første bogstav i dit efternavn");
-     LogIn();
      break;
      
      case "Mikkel I":
@@ -124,7 +122,6 @@ void CheckName(){
      
      default:
      ErrorMessage("Navn genkendes ikke");
-     LogIn();
     }
     
   }

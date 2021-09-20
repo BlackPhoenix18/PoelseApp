@@ -24,8 +24,4 @@ void LoadMenu(){
        
      }
    }
-   /*
-   LoggingIn = false;
-   LoggedIn = true;
-   */
 }
