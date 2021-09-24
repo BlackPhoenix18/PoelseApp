@@ -21,7 +21,7 @@ void Message(){
   }
   
   fill(200);
-  rect(width/2,MessageBoxPos,300,50);    //Draws the error message
+  rect(width/2 - (2*Message.length()-40),MessageBoxPos,300+4*Message.length(),50);    //Draws the error message
   fill(255);
-  text(Message,width/2-100,MessageBoxPos+8);
+  text(Message,width/2-(100+4*Message.length()),MessageBoxPos+8);
 }
