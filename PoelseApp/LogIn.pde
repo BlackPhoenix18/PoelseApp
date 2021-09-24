@@ -10,7 +10,7 @@ void LogIn(){
       LoggingIn = false;
       Box = 0;
     }
-    } else if (key >= 'a' && key <= 'z' || key >= 'A' && key <= 'Z') {    //Registers user input
+    } else if (key >= 'a' && key <= 'z' || key >= 'A' && key <= 'Z' || key == ' ') {    //Registers user input
       if(Name.length() < 16){
       Name += key;
     } else {

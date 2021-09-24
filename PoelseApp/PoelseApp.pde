@@ -4,7 +4,7 @@ boolean LoggedIn = false;
 
 int CurrentPage = 0;    //Defines which page the user is currently on. 0 is the main menu and from 1 to *Insert number of questions here* are questions
 String Question = "";
-int CurrentAnswer;
+int CurrentAnswer = 0;
 boolean NextQuestionAllowed;
 
 int Box = 0;
@@ -31,6 +31,19 @@ void draw(){
   clear();
   background(100);
   
+  fill(255);
+  text(mouseX + " / " + mouseY, width/2,850);
+  
+  fill(200);
+  if(LoggedIn == false || CurrentPage > 0 && CurrentAnswer == 0){
+    fill(180);
+  }
+  rect(750,750,150,50);  //Draws the next button
+  fill(255);
+  textSize(30);
+  textAlign(CENTER);
+  text("Next",750,760);
+  
  if(CurrentPage == 0) {
    fill(200);            //Draws the login button
    rect(100,75,100,50);
@@ -41,7 +54,6 @@ void draw(){
    println("All questions answered. Returning to main menu");
  } else {
    LoadQuestion();    //Loads which question should be asked
-   println("Question " + CurrentPage + " Loaded");
  }
   if(IncomingMessage){
     Message();
