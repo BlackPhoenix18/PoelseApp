@@ -1,15 +1,15 @@
 void LogIn(){
   if(LoggingIn){
-    if (key==BACKSPACE) {
+    if (key==BACKSPACE) {    //Deletes prior input
       if (Name.length()>0) {
         Name = Name.substring(0, Name.length()-1);
       }
-    } else if(key == ENTER || key == RETURN){
+    } else if(key == ENTER || key == RETURN){    //Logs in
     CheckName();
     if(LoggedIn){
       LoggingIn = false;
     }
-    } else if (key >= 'a' && key <= 'z' || key >= 'A' && key <= 'Z') {
+    } else if (key >= 'a' && key <= 'z' || key >= 'A' && key <= 'Z') {    //Registers user input
       if(Name.length() < 16){
       Name += key;
     } else {
@@ -19,4 +19,5 @@ void LogIn(){
       ErrorMessage("Tast genkendes ikke");
     }
   }
+  Name = Name.toUpperCase();  //Forces upper case
 }

@@ -1,121 +1,121 @@
 void CheckName(){
   if(Name != null){
     switch(Name){
-     case "Albert":
+     case "ALBERT":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Andy":
+     case "ANDY":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Antoni":
+     case "ANTONI":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Bagge":
+     case "BAGGE":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Christoffer":
+     case "CHRISTOFFER":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Elias":
+     case "ELIAS":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Emil":
+     case "EMIL":
      ErrorMessage("Indtast venligst også første bogstav i dit efternavn");
      break;
      
-     case "emil L":
+     case "EMIL L":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Emil S":
+     case "EMIL S":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Frederik":
+     case "FREDERIK":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Guillermo":
+     case "GUILLERMO":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Hjalte":
+     case "HJALTE":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Laurits":
+     case "LAURITS":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Luca":
+     case "LUCA":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Laerke":
+     case "LAERKE":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Mikkel":
+     case "MIKKEL":
      ErrorMessage("Indtast venligst også første bogstav i dit efternavn");
      break;
      
-     case "Mikkel I":
+     case "MIKKEL I":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Mikkel J":
+     case "MIKKEL J":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Nicklas":
+     case "NICKLAS":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Shadi":
+     case "SHADI":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Tobias":
+     case "TOBIAS":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Alan":
-     Name = "Valdemar";
+     case "ALAN":
+     Name = "VALDEMAR";
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "Valdemar":
+     case "VALDEMAR":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
      
-     case "William":
+     case "WILLIAM":
      LoggedIn = true;
      println("Logged in as: " + Name);
      break;
