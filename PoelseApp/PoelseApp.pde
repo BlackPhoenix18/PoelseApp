@@ -9,6 +9,11 @@ boolean NextQuestionAllowed;
 
 int Box = 0;
 
+String Message = "";
+boolean IncomingMessage = false;
+int MessageTimer = 0;
+int MessageBoxPos = -50;
+
 void setup(){
   //fullScreen();
   size(1000,1000);
@@ -38,7 +43,9 @@ void draw(){
    LoadQuestion();    //Loads which question should be asked
    println("Question " + CurrentPage + " Loaded");
  }
-  
+  if(IncomingMessage){
+    Message();
+  }
 }
 
 void mousePressed(){

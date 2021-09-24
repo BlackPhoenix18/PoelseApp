@@ -8,15 +8,18 @@ void LogIn(){
     CheckName();
     if(LoggedIn){
       LoggingIn = false;
+      Box = 0;
     }
     } else if (key >= 'a' && key <= 'z' || key >= 'A' && key <= 'Z') {    //Registers user input
       if(Name.length() < 16){
       Name += key;
     } else {
-    ErrorMessage("Navnet er for langt");
+      ErrorMessage("Navnet er for langt");
     }
     } else {
-      ErrorMessage("Tast genkendes ikke");
+      if(keyCode != SHIFT){
+        ErrorMessage("Tast genkendes ikke");
+      }
     }
   }
   Name = Name.toUpperCase();  //Forces upper case
