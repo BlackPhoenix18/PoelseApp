@@ -46,12 +46,12 @@ void LoadQuestion(){
   
   for(int i = 0 ; i <10 ; i++){  //Draws the answer circles
     if(CurrentAnswer == i+1){
-      fill(255);
+      fill(SubColor);
     } else {
-      fill(200);
+      fill(MainColor);
     }
    circle(250+50*i,625,50); 
-   fill(30);
+   fill(255);
    textAlign(CENTER);
    textSize(30);
    text(i+1,250+50*i,635);

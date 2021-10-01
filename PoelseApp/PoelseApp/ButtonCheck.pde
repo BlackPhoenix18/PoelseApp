@@ -9,7 +9,6 @@ void ButtonCheck(){
     for(int i = 1 ; i<11 ; i++){
       if(175+50*i<mouseX && mouseX < 225+50*i && 600 < mouseY && mouseY < 650){
        CurrentAnswer = i;
-       println("Answer " + i + " selected");
       }
     }
   }
@@ -21,13 +20,20 @@ void ButtonCheck(){
     } else if(LoggedIn == false){
       IncomingMessage = true;
       Message = "Du skal logge ind først";
-    } else if(CurrentPage > 0 && CurrentAnswer != 0){
-      CurrentPage++;
+    } else if(CurrentPage > 0 && CurrentAnswer != 0){ 
+      
+      Resultater.setString(1,"Navn", Name); //Saves the answer to table
+      Resultater.setInt(1,"Svar paa spoergsmaal " + CurrentPage, CurrentAnswer);
+      println("Answer " + CurrentAnswer + " selected");
       CurrentAnswer = 0;
+      
+      CurrentPage++;
       println("Question " + CurrentPage + " Loaded");
     } else {
       IncomingMessage = true;
       Message = "Du skal svare på spørgsmålet først";
     }
-  }
+  } /*else if(){  //Checks for the go back button
+    
+  }*/
 }

@@ -20,7 +20,7 @@ void Message(){
     }
   }
   
-  fill(200);
+  fill(MainColor);
   rect(width/2,MessageBoxPos,300+5*Message.length(),50);    //Draws the error message
   fill(255);
   textSize(20);

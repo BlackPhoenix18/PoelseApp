@@ -3,9 +3,9 @@ void LoadMenu(){
      if(Box < 10){
        Box++;
      }
-     fill(150);    //Draws the boxes for inputting names
+     fill(MainColor);    //Draws the boxes for inputting names
      rect(width/2,height/2,20*Box,10*Box);
-     fill(220);
+     fill(SubColor);
      rect(width/2,height/2+20,16*Box,3*Box);
      if(Box == 10){
        fill(255);

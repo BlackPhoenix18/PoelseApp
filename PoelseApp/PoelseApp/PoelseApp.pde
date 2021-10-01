@@ -7,6 +7,8 @@ String Question = "";
 int CurrentAnswer = 0;
 boolean NextQuestionAllowed;
 
+Table Resultater;
+
 int Box = 0;
 
 String Message = "";
@@ -14,8 +16,13 @@ boolean IncomingMessage = false;
 int MessageTimer = 0;
 int MessageBoxPos = -50;
 
+color MainColor = color(188,54,12);
+color SubColor = color(230,70,30);
+
+
 void setup(){
-  //fullScreen();
+  TableSetup();
+
   size(1000,1000);
   scale(width/1920);
   println("Scale set to: " + width/1920);
@@ -32,26 +39,44 @@ void draw(){
   background(100);
   
   fill(255);
-  text(mouseX + " / " + mouseY, width/2,850);
   
-  fill(200);
-  if(LoggedIn == false || CurrentPage > 0 && CurrentAnswer == 0){
-    fill(180);
+  fill(MainColor);
+  if(LoggedIn == false || CurrentPage > 0 && CurrentAnswer == 0){  //Changes the colour to indicate that the next button cannot be used
+    fill(120,40,5);
   }
   rect(750,750,150,50);  //Draws the next button
   fill(255);
   textSize(30);
   textAlign(CENTER);
-  text("Next",750,760);
+  text("Næste",750,760);
+  
+  fill(MainColor);  //Displays who you are currently logged in as
+  rect(150,175,200,70);
+  fill(255);
+  textSize(20);
+  text("Logget ind som:",150,160);
+  if (LoggedIn){
+    textSize(30-Name.length());
+    text(Name,150,190);
+  } else {
+    textSize(20);
+    text("Ikke logget ind",150,190);
+  }
+  
   
  if(CurrentPage == 0) {
-   fill(200);            //Draws the login button
+   fill(MainColor);            //Draws the login button
    rect(100,75,100,50);
+   fill(255);
+   textSize(25);
+   textAlign(CENTER);
+   text("Log In",100,85);
    LoadMenu();
    
  } else if(CurrentPage == 11){  //Returns to the main menu after all questions have been answered
+   saveTable(Resultater, "data/Resultater.csv");
+   println("Results Saved");
    CurrentPage = 0;
-   println("All questions answered. Returning to main menu");
  } else {
    LoadQuestion();    //Loads which question should be asked
  }
