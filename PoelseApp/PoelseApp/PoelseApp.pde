@@ -21,6 +21,8 @@ color SubColor = color(230,70,30);
 
 int SelectedRow;
 
+PImage Background;
+
 void setup(){
   TableSetup();
 
@@ -31,13 +33,17 @@ void setup(){
   rectMode(CENTER);
   frameRate(60);
   
+  stroke(120,40,5);
+  strokeWeight(5);
+  
+  Background = loadImage("PoelseBackground.png");
   
   println("Setup complete");
 }
 
 void draw(){
   clear();
-  background(100);
+  background(Background);
   
   fill(255);
   

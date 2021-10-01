@@ -1,4 +1,8 @@
 void TableSetup(){
+    Table OldData = loadTable("Resultater.csv","header");
+    Resultater = OldData;
+
+  if(OldData == null){
   Resultater = new Table(); //Prepares the results table
   Resultater.addColumn("Navn");
   Resultater.addColumn("Svar paa spoergsmaal 1", Table.INT);
@@ -33,6 +37,8 @@ void TableSetup(){
   Resultater.setString(18,"Navn","TOBIAS");
   Resultater.setString(19,"Navn","VALDEMAR");
   Resultater.setString(20,"Navn","WILLIAM");
+  }
+  
   
   println("Table setup complete");
 }

@@ -40,8 +40,12 @@ void LoadQuestion(){
     Question = "?";
     break;
   }
+  fill(MainColor);
+  rect(width/2,290,300+10*Question.length(),50);
+  
   textAlign(CENTER);
   textSize(30);
+  fill(255);
   text(Question,width/2,300);
   
   for(int i = 0 ; i <10 ; i++){  //Draws the answer circles
