@@ -58,16 +58,16 @@ void draw(){
   text("Næste",750,760);
   
   fill(MainColor);  //Displays who you are currently logged in as
-  rect(150,175,200,70);
+  rect(150,220,200,70);
   fill(255);
   textSize(20);
-  text("Logget ind som:",150,160);
+  text("Logget ind som:",150,210);
   if (LoggedIn){
     textSize(30-Name.length());
-    text(Name,150,190);
+    text(Name,150,240);
   } else {
     textSize(20);
-    text("Ikke logget ind",150,190);
+    text("Ikke logget ind",150,240);
   }
   
   

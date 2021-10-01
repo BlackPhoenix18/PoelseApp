@@ -7,7 +7,7 @@ void ButtonCheck(){
    
   } else {  // Clicks the answer input buttons
     for(int i = 1 ; i<11 ; i++){
-      if(175+50*i<mouseX && mouseX < 225+50*i && 600 < mouseY && mouseY < 650){
+      if(200+50*i<mouseX && mouseX < 250+50*i && 825 < mouseY && mouseY < 875){
        CurrentAnswer = i;
       }
     }
