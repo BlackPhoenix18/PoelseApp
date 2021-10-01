@@ -55,7 +55,11 @@ void draw(){
   fill(255);
   textSize(30);
   textAlign(CENTER);
-  text("Næste",750,760);
+  if(CurrentPage == 10){
+    text("Afslut",750,760);
+  } else {
+    text("Næste",750,760);
+  }
   
   fill(MainColor);  //Displays who you are currently logged in as
   rect(150,220,200,70);
@@ -84,6 +88,11 @@ void draw(){
    saveTable(Resultater, "data/Resultater.csv");
    println("Results Saved");
    CurrentPage = 0;
+   LoggedIn = false;
+   Name = "";
+   IncomingMessage = true;
+   Message = "Tak for besvarelsen";
+   
  } else {
    LoadQuestion();    //Loads which question should be asked
  }
