@@ -19,6 +19,7 @@ int MessageBoxPos = -50;
 color MainColor = color(188,54,12);
 color SubColor = color(230,70,30);
 
+int SelectedRow;
 
 void setup(){
   TableSetup();

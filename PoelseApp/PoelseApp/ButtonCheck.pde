@@ -22,8 +22,8 @@ void ButtonCheck(){
       Message = "Du skal logge ind først";
     } else if(CurrentPage > 0 && CurrentAnswer != 0){ 
       
-      Resultater.setString(1,"Navn", Name); //Saves the answer to table
-      Resultater.setInt(1,"Svar paa spoergsmaal " + CurrentPage, CurrentAnswer);
+      FindRow();
+      Resultater.setInt(SelectedRow,"Svar paa spoergsmaal " + CurrentPage, CurrentAnswer);  //Saves the answer to table
       println("Answer " + CurrentAnswer + " selected");
       CurrentAnswer = 0;
       

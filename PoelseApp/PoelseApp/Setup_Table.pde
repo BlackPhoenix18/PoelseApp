@@ -34,6 +34,5 @@ void TableSetup(){
   Resultater.setString(19,"Navn","VALDEMAR");
   Resultater.setString(20,"Navn","WILLIAM");
   
-  saveTable(Resultater, "data/Resultater.csv");
   println("Table setup complete");
 }
