@@ -60,26 +60,34 @@ void draw(){
   } else {
     text("Næste",750,760);
   }
-  if(CurrentPage != 0){
-    fill(MainColor);
-    rect(250,750,150,50);
-    fill(255);
-    textSize(30);
-    textAlign(CENTER);
+  fill(MainColor);
+  rect(250,750,150,50);
+  fill(255);
+  textSize(30);
+  textAlign(CENTER);
+  if(CurrentPage == 0){
+    text("Resultater",250,760);
+  } else {
     text("Menu",250,760);
   }
   
-  fill(MainColor);  //Displays who you are currently logged in as
-  rect(150,220,200,70);
-  fill(255);
-  textSize(20);
-  text("Logget ind som:",150,210);
-  if (LoggedIn){
-    textSize(30-Name.length());
-    text(Name,150,240);
-  } else {
+  if(CurrentPage < 20){
+    fill(MainColor);  //Displays who you are currently logged in as
+    rect(150,220,200,70);
+    fill(255);
     textSize(20);
-    text("Ikke logget ind",150,240);
+    text("Logget ind som:",150,210);
+    if (LoggedIn){
+      textSize(30-Name.length());
+      text(Name,150,240);
+    } else {
+      textSize(20);
+      text("Ikke logget ind",150,240);
+    }
+    
+  } else {  //Displayes the saved results
+    
+    
   }
   
   
@@ -101,7 +109,7 @@ void draw(){
    IncomingMessage = true;
    Message = "Tak for besvarelsen";
    
- } else {
+ } else if(CurrentPage < 11){
    LoadQuestion();    //Loads which question should be asked
  }
   if(IncomingMessage){

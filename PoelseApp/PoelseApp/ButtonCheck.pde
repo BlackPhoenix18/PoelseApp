@@ -13,9 +13,12 @@ void ButtonCheck(){
     }
   }
   
-  if(CurrentPage != 0){
-    if(175 < mouseX && mouseX < 325  &&  725 < mouseY && mouseY < 775){
+  if(175 < mouseX && mouseX < 325  &&  725 < mouseY && mouseY < 775){  //Goes to menu or results screen if already on menu
+    if(CurrentPage != 0){
       CurrentPage = 0;
+    }
+    else {
+      CurrentPage = 20;
     }
   }
   
@@ -26,8 +29,7 @@ void ButtonCheck(){
     } else if(LoggedIn == false){
       IncomingMessage = true;
       Message = "Du skal logge ind først";
-    } else if(CurrentPage > 0 && CurrentAnswer != 0){ 
-      
+    } else if(0 < CurrentPage && CurrentPage < 11  &&  CurrentAnswer != 0){ 
       FindRow();
       Resultater.setInt(SelectedRow,"Svar paa spoergsmaal " + CurrentPage, CurrentAnswer);  //Saves the answer to table
       println("Answer " + CurrentAnswer + " selected");
@@ -35,11 +37,15 @@ void ButtonCheck(){
       
       CurrentPage++;
       println("Question " + CurrentPage + " Loaded");
-    } else {
+    } else if(0 < CurrentPage && CurrentPage < 11  &&  CurrentAnswer == 0){
       IncomingMessage = true;
       Message = "Du skal svare på spørgsmålet først";
+      
+    } else if(CurrentPage >= 20){
+      CurrentPage++;
+      if(CurrentPage == 25){
+        CurrentPage = 0;
+      }
     }
-  } /*else if(){  //Checks for the go back button
-    
-  }*/
+  }
 }
