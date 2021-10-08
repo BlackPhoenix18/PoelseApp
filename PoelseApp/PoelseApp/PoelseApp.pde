@@ -60,6 +60,14 @@ void draw(){
   } else {
     text("Næste",750,760);
   }
+  if(CurrentPage != 0){
+    fill(MainColor);
+    rect(250,750,150,50);
+    fill(255);
+    textSize(30);
+    textAlign(CENTER);
+    text("Menu",250,760);
+  }
   
   fill(MainColor);  //Displays who you are currently logged in as
   rect(150,220,200,70);

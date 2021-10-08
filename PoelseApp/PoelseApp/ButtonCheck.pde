@@ -5,14 +5,20 @@ void ButtonCheck(){
       println("Login button pressed");
    }
    
-  } else {  // Clicks the answer input buttons
+  } else if(CurrentPage < 20){  // Clicks the answer input buttons
     for(int i = 1 ; i<11 ; i++){
       if(200+50*i<mouseX && mouseX < 250+50*i && 825 < mouseY && mouseY < 875){
        CurrentAnswer = i;
       }
     }
   }
-    
+  
+  if(CurrentPage != 0){
+    if(175 < mouseX && mouseX < 325  &&  725 < mouseY && mouseY < 775){
+      CurrentPage = 0;
+    }
+  }
+  
     if(675 < mouseX && mouseX < 825 && 725 < mouseY && mouseY < 775){  //Click the next page button
     if(LoggedIn == true && CurrentPage == 0){
       CurrentPage++;
