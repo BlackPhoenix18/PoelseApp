@@ -26,10 +26,10 @@ void ButtonCheck(){
     if(LoggedIn == true && CurrentPage == 0){
       CurrentPage++;
       CurrentAnswer = 0;
-    } else if(LoggedIn == false){
+    } else if(LoggedIn == false && CurrentPage < 20){
       IncomingMessage = true;
       Message = "Du skal logge ind først";
-    } else if(0 < CurrentPage && CurrentPage < 11  &&  CurrentAnswer != 0){ 
+    } else if(CurrentPage < 20  &&  CurrentAnswer != 0){ 
       FindRow();
       Resultater.setInt(SelectedRow,"Svar paa spoergsmaal " + CurrentPage, CurrentAnswer);  //Saves the answer to table
       println("Answer " + CurrentAnswer + " selected");
@@ -41,7 +41,8 @@ void ButtonCheck(){
       IncomingMessage = true;
       Message = "Du skal svare på spørgsmålet først";
       
-    } else if(CurrentPage >= 20){
+    }
+    if(CurrentPage >= 20){
       CurrentPage++;
       if(CurrentPage == 25){
         CurrentPage = 0;

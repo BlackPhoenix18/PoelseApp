@@ -48,8 +48,11 @@ void draw(){
   fill(255);
   
   fill(MainColor);
-  if(LoggedIn == false || CurrentPage > 0 && CurrentAnswer == 0){  //Changes the colour to indicate that the next button cannot be used
+  if(LoggedIn == false || CurrentPage > 0 && CurrentPage < 20 && CurrentAnswer == 0){  //Changes the colour to indicate that the next button cannot be used
     fill(120,40,5);
+  }
+  if(CurrentPage >= 20){
+    fill(MainColor);
   }
   rect(750,750,150,50);  //Draws the next button
   fill(255);
@@ -86,8 +89,7 @@ void draw(){
     }
     
   } else {  //Displayes the saved results
-    
-    
+  ShowResults();
   }
   
   
