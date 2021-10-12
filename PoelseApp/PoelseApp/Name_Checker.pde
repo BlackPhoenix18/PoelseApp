@@ -102,6 +102,10 @@ void CheckName(){
       case "WILLIAM":
       LoggedIn = true;
       break;
+      
+      case "LASSE":
+      LoggedIn = true;
+      break;
      
       default:
       ErrorMessage("Navn genkendes ikke");

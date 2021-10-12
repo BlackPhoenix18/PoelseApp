@@ -85,5 +85,9 @@ void FindRow(){
     SelectedRow = 20;
     break;
     
+    case "LASSE":
+    SelectedRow = 21;
+    break;
+    
   }
 }

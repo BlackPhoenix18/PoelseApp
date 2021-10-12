@@ -1,5 +1,5 @@
 void LoadQuestion(){
-  SetQuestion();
+  SetQuestion(CurrentPage);
   
   fill(MainColor);
   rect(width/2,620,300+7*Question.length(),50);
@@ -23,8 +23,8 @@ void LoadQuestion(){
   } 
 }
 
-void SetQuestion(){
-  switch(CurrentPage){
+void SetQuestion(int CurrentQuestion){
+  switch(CurrentQuestion){
     //Ketchup
     case 1:
     Question = "(sur-sød) Hvordan er den indkøbte ketchups smag?";

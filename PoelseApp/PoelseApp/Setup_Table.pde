@@ -37,6 +37,7 @@ void TableSetup(){
   Resultater.setString(18,"Navn","TOBIAS");
   Resultater.setString(19,"Navn","VALDEMAR");
   Resultater.setString(20,"Navn","WILLIAM");
+  Resultater.setString(21,"Navn","LASSE");
   }
   
   
