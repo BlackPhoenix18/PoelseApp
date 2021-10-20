@@ -103,7 +103,20 @@ void draw(){
    LoadMenu();
    
  } else if(CurrentPage == 11){  //Returns to the main menu after all questions have been answered
-   saveTable(Resultater, "data/Resultater.csv");
+   
+   int Row;  //Calculates the sum of answers
+   int Column;
+   int TempSum = 0;
+   for(Column = 1; Column < 11; Column++){
+     for(Row = 0; Row < 22; Row++){
+       TempSum += Resultater.getInt(Row,Column);
+     }
+     Resultater.setInt(22,Column,TempSum);
+     TempSum = 0;
+   }
+   
+   saveTable(Resultater, "data/Resultater.csv");  //Saved the results to table
+   
    println("Results Saved");
    CurrentPage = 0;
    LoggedIn = false;

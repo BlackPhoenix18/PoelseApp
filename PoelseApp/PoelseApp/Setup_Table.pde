@@ -38,6 +38,7 @@ void TableSetup(){
   Resultater.setString(19,"Navn","VALDEMAR");
   Resultater.setString(20,"Navn","WILLIAM");
   Resultater.setString(21,"Navn","LASSE");
+  Resultater.setString(22,"Navn","I Alt");
   }
   
   

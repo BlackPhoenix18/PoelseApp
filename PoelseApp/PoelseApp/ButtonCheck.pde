@@ -11,6 +11,7 @@ void ButtonCheck(){
        CurrentAnswer = i;
       }
     }
+    LoggingIn = false;
   }
   
   if(175 < mouseX && mouseX < 325  &&  725 < mouseY && mouseY < 775){  //Goes to menu or results screen if already on menu
@@ -20,6 +21,7 @@ void ButtonCheck(){
     else {
       CurrentPage = 20;
     }
+    LoggingIn = false;
   }
   
     if(675 < mouseX && mouseX < 825 && 725 < mouseY && mouseY < 775){  //Click the next page button
@@ -48,5 +50,6 @@ void ButtonCheck(){
         CurrentPage = 0;
       }
     }
+    LoggingIn = false;
   }
 }

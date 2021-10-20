@@ -21,11 +21,28 @@ void ShowResults(){
   text(Question,width/2,870);
   
   
-  switch(CurrentPage){  //Draws the fitting diagram depending on the page
-    case 20:
-    
-    break;
-    
-    
-  }
+  //Draws the fitting diagram depending on the page
+  stroke(0);
+  fill(0);
+  
+  line(200,700,800,700);
+  text("0",190,700);
+  
+  line(200,480,800,480);
+  text("5",190,480);
+  
+  line(200,260,800,260);
+  text("10",180,260);
+  
+  stroke(120,40,5);
+  
+  
+  fill(200,100,100);
+  rectMode(CORNERS);
+  rect(250,700-(2*Resultater.getInt(22,(CurrentPage-19))),300,700);
+  
+  fill(100,100,200);
+  rect(700,700-(2*Resultater.getInt(22,(CurrentPage-18))),750,700);
+  
+  rectMode(CENTER);
 }
